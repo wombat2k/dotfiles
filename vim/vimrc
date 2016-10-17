@@ -1,0 +1,65 @@
+" Set VIM mode. A bit redundant, I know
+set nocompatible 
+
+" Enable Pathogen
+call pathogen#infect()
+
+""""""""""""""""""""""""""""""""""
+" Tabs
+""""""""""""""""""""""""""""""""""
+" convert tabs to spaces
+set expandtab 
+set shiftwidth=4
+
+""""""""""""""""""""""""""""""""""
+" Syntax
+""""""""""""""""""""""""""""""""""
+syntax on " Turn on syntax highligthing
+
+" Enable Omnicompletion
+set omnifunc=syntaxcomplete#Complete
+
+""""""""""""""""""""""""""""""""""
+" Indent
+""""""""""""""""""""""""""""""""""
+" Switch on filetype detection and loads 
+" indent file (indent.vim) for specific file types
+filetype plugin indent on
+set autoindent " Copy indent from the row above
+set si " Smart indent
+
+
+""""""""""""""""""""""""""""""""""
+" Set the theme
+""""""""""""""""""""""""""""""""""
+set background=dark
+colorscheme papercolor
+
+""""""""""""""""""""""""""""""""""
+" Search
+""""""""""""""""""""""""""""""""""
+set hls " highlight search
+set ignorecase  " Ignore case
+
+""""""""""""""""""""""""""""""""""
+" Key mappings
+""""""""""""""""""""""""""""""""""
+" Disable arrow keys otherwise, you'll never learn
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Start Marked 2. Make sure the file exists before calling it
+nnoremap <leader>m :silent !open -a "Marked 2.app" '%:p:h'<cr>
+
+""""""""""""""""""""""""""""""""""
+" Misc
+""""""""""""""""""""""""""""""""""
+set showmatch  "Show matching bracets when text indicator is over them
+set nu " Number lines
+set linebreak " linebreak
+
+" Close suggestion buffer when completed
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
