@@ -2,7 +2,10 @@
 
 # Detect Operating System
 OS=`uname`
-DOTFILES_HOME=$HOME/dotfiles
+DOTFILES_HOME=$HOME/.dotfiles
+
+# Remove dotfiles symlink if it exists already
+rm $DOTFILES_HOME
 
 # We're going to assume that if $HOME/Dropbox exists, it means Dropbox is installed
 if [ -d $HOME/Dropbox ]; then
