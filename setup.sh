@@ -21,7 +21,7 @@ fi
 VIM_HOME=$HOME/.vim
 
 # Remove any existing .vim dir or .vimrc file
-rm -rf $VIM_HOME $HOME/.vimrc
+rm -rf $VIM_HOME $HOME/.vimrc $HOME/.vimrc
 
 # Create .vim directory
 mkdir $VIM_HOME $VIM_HOME/bundle
@@ -46,8 +46,9 @@ do
     ln -s $DOTFILES_HOME/vim/themes/$theme $VIM_HOME/bundle/$theme
 done
 
-# Install vimrc file
+# Install vimrc and gvimrc files
 ln -s $DOTFILES_HOME/vim/vimrc $HOME/.vimrc
+ln -s $DOTFILES_HOME/vim/gvimrc $HOME/.gvimrc
 
 #######
 # zsh #
