@@ -37,13 +37,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 DBOX=$HOME/Dropbox
 PATH="$DBOX/bin:/usr/local/bin:$PATH:$HOME/anaconda/bin"
-HOMEBREW_GITHUB_API_TOKEN=e2837773b45c04de3e4a4fd0130bdf76b29aa588
 export JAVA_TOOLS_OPTIONS=-Djava.awt.headless=true
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
-export PATH=${PATH}:${JBOSS_HOME}/bin
-export AWS_ACCESS_KEY=AKIAJW3FDQAAEIFYZ6OA
-export AWS_SECRET_KEY=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
 export EDITOR="$DBOX/bin/mvim -v"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
