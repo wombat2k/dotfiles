@@ -33,7 +33,7 @@ set si " Smart indent
 " Set the theme
 """"""""""""""""""""""""""""""""""
 set background=dark
-colorscheme papercolor
+colorscheme PaperColor
 
 """"""""""""""""""""""""""""""""""
 " Search
