@@ -53,6 +53,10 @@ noremap <Right> <NOP>
 " Start Marked 2. Make sure the file exists before calling it
 nnoremap <leader>m :silent !open -a "Marked 2.app" '%:p:h'<cr>
 
+" Write file if read-only
+" Source: http://www.catonmat.net/blog/sudo-vim/
+cnoremap sudow w !sudo tee % >/dev/null
+
 """"""""""""""""""""""""""""""""""
 " Misc
 """"""""""""""""""""""""""""""""""
