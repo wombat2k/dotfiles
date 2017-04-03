@@ -13,8 +13,10 @@ ZSH_THEME="agnoster"
 if [ "$OS" = 'Darwin' ]; then
     alias vi="mvim -v"
     plugins=(git brew osx svn python mvn)
-    export JAVA_TOOLS_OPTIONS=-Djava.awt.headless=true
     export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+    # Prevent headless Java Apps from appearing on the Dock Bar
+    export JAVA_TOOLS_OPTIONS=-Djava.awt.headless=true
 # FreeBSD specific settings
 elif [ "$OS" = 'FreeBSD' ]; then
     alias vi="vim"
@@ -23,10 +25,10 @@ elif [ "$OS" = 'FreeBSD' ]; then
 fi
 
 # TODO Move exports to separate file
-PATH="$HOME/bin:/usr/local/bin:$PATH:$HOME/anaconda/bin"
+PATH="$HOME/bin:/usr/local/bin:$PATH:$HOME/Python/anaconda/bin"
 
 # run Oh My zsh
 source $ZSH/oh-my-zsh.sh
 
-# This was added by iTerm
+# Enable shell integration with iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
