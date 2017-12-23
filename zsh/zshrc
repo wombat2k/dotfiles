@@ -12,20 +12,15 @@ ZSH_THEME="agnoster"
 # Mac specific settings
 if [ "$OS" = 'Darwin' ]; then
     alias vi="mvim -v"
-    plugins=(git brew osx svn python mvn)
-    export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+    plugins=(git brew osx python)
 
-    # Prevent headless Java Apps from appearing on the Dock Bar
-    export JAVA_TOOLS_OPTIONS=-Djava.awt.headless=true
 # FreeBSD specific settings
 elif [ "$OS" = 'FreeBSD' ]; then
     alias vi="vim"
-    alias python=python2.7
-    alias python3=python3.5
 fi
 
 # TODO Move exports to separate file
-PATH="$HOME/bin:/usr/local/bin:$PATH:$HOME/Python/anaconda/bin"
+PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 # run Oh My zsh
 source $ZSH/oh-my-zsh.sh
