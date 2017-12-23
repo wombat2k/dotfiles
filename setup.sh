@@ -7,6 +7,7 @@ if [ $OS == "Darwin" ]; then
     DOTFILES_HOME=$HOME/Documents/Dotfiles
 else
     DOTFILES_HOME=$HOME/.dotfiles
+fi
 
 echo "Attempting install dotfiles on `hostname` running $OS"
 
