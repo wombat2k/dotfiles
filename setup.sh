@@ -2,7 +2,11 @@
 
 # Detect Operating System
 OS=`uname`
-DOTFILES_HOME=$HOME/dotfiles
+
+if [ $OS == "Darwin" ]; then
+    DOTFILES_HOME=$HOME/Documents/Dotfiles
+else
+    DOTFILES_HOME=$HOME/.dotfiles
 
 echo "Attempting install dotfiles on `hostname` running $OS"
 
